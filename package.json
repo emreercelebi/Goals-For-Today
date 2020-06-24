@@ -1,0 +1,21 @@
+{
+  "name": "react-project-test",
+  "version": "1.0.0",
+  "description": "test project",
+  "main": "index.js",
+  "author": "Emre Ercelebi",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "@babel/preset-react": "^7.10.1",
+    "babel-loader": "^8.1.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
+  },
+  "scripts": {
+    "build": "webpack --mode production"
+  }
+}
