@@ -1,0 +1,17 @@
+.Form
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+
+  &-form
+  {
+    padding-bottom: 16px;
+  }
+
+  &-output
+  {
+    color: $blue-dark;
+  }
+}

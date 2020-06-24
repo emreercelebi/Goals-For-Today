@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
 
 class Form extends Component {
   constructor() {
@@ -13,7 +12,6 @@ class Form extends Component {
   }
 
   handleChange(event) {
-    console.log(event.target);
     const { value } = event.target;
     this.setState(() => {
       return {
@@ -24,18 +22,19 @@ class Form extends Component {
 
   render() {
     return (
-      <form>
-        <input
-          type="text"
-          value={this.state.value}
-          onChange={this.handleChange}
-        />
-      </form>
+      <div className="Form">
+        <form className="Form-form">
+          <input
+            type="text"
+            onChange={this.handleChange}
+          />
+        </form>
+        <div className="Form-output">
+          Your current input is: {this.state.value}
+        </div>
+      </div>
     )
   }
 }
 
 export default Form;
-
-const wrapper = document.querySelector("#container");
-wrapper && ReactDOM.render(<Form />, wrapper);
