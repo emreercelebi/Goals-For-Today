@@ -30,7 +30,7 @@ class Form extends Component {
           />
         </form>
         <div className="Form-output">
-          Your current input is: {this.state.value}
+          Your current input is [alex text]: {this.state.value}
         </div>
       </div>
     )
