@@ -32,6 +32,10 @@ class Form extends Component {
         <div className="Form-output">
           Your current input is [alex text]: {this.state.value}
         </div>
+        <br/>
+        <button onClick={() => alert("hello!!")} >
+          CLICK ME
+        </button>
       </div>
     )
   }
