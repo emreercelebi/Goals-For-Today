@@ -1,7 +1,5 @@
 @import 'partials/variables';
-@import 'components/Form';
+@import 'partials/mixins';
 
-.Main
-{
-  background-color: $red;
-}
+@import 'components/Form';
+@import 'components/Login';

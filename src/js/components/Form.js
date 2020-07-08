@@ -33,7 +33,7 @@ class Form extends Component {
           Your current input is [alex text]: {this.state.value}
         </div>
         <br/>
-        <button onClick={() => alert("hello!!")} >
+        <button className="ui primary button" onClick={() => alert("hello!!")} >
           CLICK ME
         </button>
       </div>

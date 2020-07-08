@@ -1,7 +1,19 @@
 require('./styles/main.scss');
-import Form from './js/components/Form.js';
-import React from "react";
+import React, { Component } from "react";
 import ReactDOM from "react-dom";
 
+import Login from './js/components/Login.js';
+
 const wrapper = document.querySelector("#container");
-wrapper && ReactDOM.render(<Form />, wrapper);
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Login />
+      </div>
+    );
+  }
+}
+
+wrapper && ReactDOM.render(<App />, wrapper);
