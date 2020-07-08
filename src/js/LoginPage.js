@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import { Button, Form } from 'semantic-ui-react';
+import React from 'react';
 
 import Heading from './components/common/Heading';
 import Text from './components/common/Text';
