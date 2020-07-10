@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import { Checkbox } from 'semantic-ui-react';
 
+import { EDIT_ICON, TRASH_ICON } from './common/constants'
 import Heading from './common/Heading';
-import Text from './common/Text';
 import IconButton from './common/IconButton';
-
-const EDIT = 'edit';
-const TRASH = 'trash alternate';
+import Text from './common/Text';
 
 const testTodos = [ //TODO: replace with data from database
   {
@@ -91,8 +89,8 @@ class ToDoItem extends Component {
           </Text>
         </div>
         <div className='ToDoItem-buttons'>
-          <IconButton baseClass='ToDoItem' onClick={this.handleEdit} icon={EDIT} size='large' />
-          <IconButton baseClass='ToDoItem' onClick={this.handleDelete} icon={TRASH} size='large' />
+          <IconButton baseClass='ToDoItem' onClick={this.handleEdit} icon={EDIT_ICON} size='large' />
+          <IconButton baseClass='ToDoItem' onClick={this.handleDelete} icon={TRASH_ICON} size='large' />
         </div>
       </div>
     )

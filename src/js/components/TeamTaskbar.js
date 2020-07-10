@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
 import { Icon } from 'semantic-ui-react';
 
-import Text from './common/Text';
+import { GROUP_ICON, SETTING_ICON, SIGN_OUT_ICON, USER_ICON } from './common/constants';
 import IconButton from './common/IconButton';
-
-const USER = 'user';
-const GROUP = 'group';
-const SIGN_OUT = 'sign-out';
-const SETTING = 'setting';
+import Text from './common/Text';
 
 const testUsers = [ //TODO: replace with real data from database
   {
@@ -39,13 +35,13 @@ class TeamTaskbar extends Component {
     return (
       <div className='TeamTaskbar'>
         <div className='TeamTaskbar-members'>
-          {testUsers.map( (user, index) => <TaskbarItem key={index} icon={USER}>{user.name}</TaskbarItem>)}
+          {testUsers.map( (user, index) => <TaskbarItem key={index} icon={USER_ICON}>{user.name}</TaskbarItem>)}
         </div>
         <div className='TeamTaskbar-bottom'>
-          <TaskbarItem icon={GROUP}>{testTeamName}</TaskbarItem>
+          <TaskbarItem icon={GROUP_ICON}>{testTeamName}</TaskbarItem>
           <div className='TeamTaskbar-buttons'>
-            <IconButton baseClass='TeamTaskbar' onClick={this.handleLogout} icon={SIGN_OUT} />
-            <IconButton baseClass='TeamTaskbar' onClick={this.handleSettings} icon={SETTING} />
+            <IconButton baseClass='TeamTaskbar' onClick={this.handleLogout} icon={SIGN_OUT_ICON} />
+            <IconButton baseClass='TeamTaskbar' onClick={this.handleSettings} icon={SETTING_ICON} />
           </div>
         </div>
       </div>
@@ -55,7 +51,7 @@ class TeamTaskbar extends Component {
 
 const TaskbarItem = (props) => {
 
-  return (
+  return (  
     <div className='TaskbarItem'>
       <Icon className='TaskbarItem-icon' name={props.icon} size='large' />
       <Text baseClass='TaskbarItem'>{props.children}</Text>

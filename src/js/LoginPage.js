@@ -1,8 +1,8 @@
 import React from 'react';
 
 import Heading from './components/common/Heading';
-import Text from './components/common/Text';
 import LoginForm from './components/LoginForm';
+import Text from './components/common/Text';
 
 const LoginPage = () => {
   return (
