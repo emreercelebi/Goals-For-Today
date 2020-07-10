@@ -1,6 +1,5 @@
 .TeamTaskbar
 {
-  width: 100%;
   max-width: 250px;
   border-right: $border-black-2;
   height: 100vh;
@@ -11,7 +10,6 @@
   @media (min-width: $medium-screen)
   {
     width: percentage(1 / 4);
-    max-width: none;
   }
 
   &-members
