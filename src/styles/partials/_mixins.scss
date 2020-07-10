@@ -21,3 +21,17 @@
     width: 1140px
   }
 }
+
+@mixin icon-button
+{
+  background-color: transparent;
+  border: none;
+  border-radius: 8px;
+  padding: 6px;
+
+  &:hover
+  {
+    background-color: $gray-light;
+    cursor: pointer;
+  }
+}

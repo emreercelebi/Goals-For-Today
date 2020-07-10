@@ -3,12 +3,18 @@
 
 @import 'components/Login';
 @import 'components/TeamTaskbar';
+@import 'components/ToDo.scss';
 
 .Main,
 .App,
 .Home
 {
   height: 100%;
+}
+
+.Home
+{
+  display: flex;
 }
 
 body

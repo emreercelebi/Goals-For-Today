@@ -1,0 +1,58 @@
+.ToDoList
+{
+  width: 50%;
+  padding-top: 48px;
+
+  &-heading
+  {
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &-items
+  {
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-top: 36px;
+  }
+}
+
+.ToDoItem
+{
+  display: flex;
+  padding: 8px;
+
+  &--selected
+  {
+    background-color: $gray-light;
+  }
+
+  &-container
+  {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    border: $border-black-2;
+    border-radius: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-right: 12px;
+  }
+
+  &-text
+  {
+    margin-left: 12px;
+  }
+
+  &-buttons
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &-button
+  {
+    @include icon-button;
+  }
+}
