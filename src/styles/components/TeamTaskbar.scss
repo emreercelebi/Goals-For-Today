@@ -1,0 +1,67 @@
+.TeamTaskbar
+{
+  width: 100%;
+  max-width: 250px;
+  border-right: $border-black-2;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (min-width: $medium-screen)
+  {
+    width: percentage(1 / 4);
+    max-width: none;
+  }
+
+  &-members
+  {
+    margin-top: 12px;
+  }
+
+  &-bottom
+  {
+    margin-bottom: 24px;
+  }
+
+  &-buttons
+  {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-top: 24px;
+  }
+
+  &-button
+  {
+    background-color: $white;
+    border: none;
+    border-radius: 8px;
+    padding: 6px;
+
+    &:hover
+    {
+      background-color: $gray-light;
+      cursor: pointer;
+    }
+  }
+}
+
+.TaskbarItem
+{
+  padding: 24px;
+  display: flex;
+  align-items: center;
+
+  &:hover
+  {
+    background-color: $gray-light;
+    cursor: pointer;
+  }
+
+  &-text
+  {
+    margin-left: 12px;
+  }
+}

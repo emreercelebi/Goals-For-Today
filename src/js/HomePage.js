@@ -3,7 +3,7 @@ import React from 'react';
 import TeamTaskbar from './components/TeamTaskbar';
 
 const HomePage = () => (
-  <div class="Home">
+  <div className='Home'>
     <TeamTaskbar />
     {/* <ToDoList />
     <CommentSection /> */}

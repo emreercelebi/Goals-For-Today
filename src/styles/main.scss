@@ -2,3 +2,16 @@
 @import 'partials/mixins';
 
 @import 'components/Login';
+@import 'components/TeamTaskbar';
+
+.Main,
+.App,
+.Home
+{
+  height: 100%;
+}
+
+body
+{
+  min-width: 0;
+}

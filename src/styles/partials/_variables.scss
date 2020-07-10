@@ -1,2 +1,12 @@
-$red: #f52563;
-$blue-dark: #0c4c87;
+//colors
+$black: #000;
+$gray-light: #f4f4f4;
+$white: #fff;
+
+//borders: $border-{color}-{width}
+$border-black-2: 2px solid $black;
+
+//screen sizes
+$small-screen: 768px;
+$medium-screen: 992px;
+$large-screen: 1200px;
