@@ -35,3 +35,29 @@
     cursor: pointer;
   }
 }
+
+@mixin form-styling
+{
+  &-form
+  {
+    width: 100%;
+    max-width: 500px !important;
+    padding: 24px;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+  }
+
+  &-field
+  {
+    margin-bottom: 24px !important;
+  }
+
+  &-label
+  {
+    display: none !important;
+  }
+
+  &-submit
+  {
+    width: 100%;
+  }
+}

@@ -3,6 +3,7 @@
 .Login
 {
   @include responsive-container;
+  @include form-styling;
 
   display: flex;
   flex-direction: column;
@@ -16,26 +17,13 @@
     margin-bottom: 32px;
   }
 
-  &-form
+  &-link
   {
-    width: 100%;
-    max-width: 500px !important;
-    padding: 24px;
-    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
-  }
+    margin-top: 24px;
 
-  &-field
-  {
-    margin-bottom: 24px !important;
-  }
-
-  &-label
-  {
-    display: none !important;
-  }
-
-  &-submit
-  {
-    width: 100%;
+    &:hover
+    {
+      text-decoration: underline;
+    }
   }
 }

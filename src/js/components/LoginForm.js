@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Button, Form } from 'semantic-ui-react';
 
+import { FormFieldHelper } from './common/helpers';
+
 class LoginForm extends Component {
   constructor(props) {
     super(props);
@@ -30,18 +32,17 @@ class LoginForm extends Component {
     }));
   }
 
+  handleLogin() {
+    //TODO: implement
+    alert('you clicked the login button');
+  }
+
   render() {
     return (
       <Form className="Login-form">
-        <Form.Field className="Login-field">
-          <label className="Login-label" htmlFor="login-email">email</label>
-          <input placeholder="email" id="login-email" onChange={this.handleEmailChange} />
-        </Form.Field>
-        <Form.Field className="Login-field">
-          <label className="Login-label" htmlFor="login-password">password</label>
-          <input placeholder="password" id="login-password" type="password" onChange={this.handlePasswordChange} />
-        </Form.Field>
-        <Button positive className="Login-submit" type='submit'>Login</Button>
+        <FormFieldHelper baseClass='Login' idPrefix='login' name='email' onChange={this.handleEmailChange} />
+        <FormFieldHelper baseClass='Login' idPrefix='login' name='password' onChange={this.handlePasswordChange} />
+        <Button positive className="Login-submit" type='submit' onClick={this.handleLogin}>Login</Button>
       </Form>
     );
   }
