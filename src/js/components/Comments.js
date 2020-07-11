@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Form, Icon } from 'semantic-ui-react';
 
-import { USER_ICON } from './common/constants';
+import { USER_ICON, EDIT_ICON } from './common/constants';
 import Heading from './common/Heading';
 import Text from './common/Text';
 
@@ -77,7 +77,7 @@ const CommentForm = (props) => {
   return (
     <Form className="Comment-form" reply>
       <Form.TextArea />
-      <Button content='Add Reply' labelPosition='left' icon='edit' primary />
+      <Button content='Add Reply' labelPosition='left' icon={EDIT_ICON} primary />
     </Form>
   )
 }

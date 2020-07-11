@@ -1,4 +1,5 @@
 //semantic ui icon names
+export const ADD_ICON = 'add';
 export const EDIT_ICON = 'edit';
 export const GROUP_ICON = 'group';
 export const SETTING_ICON = 'setting';

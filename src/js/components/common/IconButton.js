@@ -6,10 +6,11 @@ const IconButton = (props) => {
 
   const acceptableSizes = ['mini', 'tiny', 'small', 'large', 'big', 'huge', 'massive'];
   const size = props.size && acceptableSizes.includes(props.size) ? props.size : 'big';
+  const color = props.color ? props.color : 'black';
 
   return (
     <button className={props.baseClass + '-' + 'button'} type='button' onClick={props.onClick}>
-      <Icon name={props.icon} size={size} />
+      <Icon name={props.icon} size={size} color={color} />
     </button>
   );
 }

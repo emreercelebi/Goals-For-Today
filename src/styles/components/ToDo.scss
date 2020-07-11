@@ -1,7 +1,12 @@
 .ToDoList
 {
+  @include form-styling;
+
   width: 50%;
   padding-top: 48px;
+  overflow: auto;
+  position: relative;
+  flex-grow: 1;
 
   &-heading
   {
@@ -14,6 +19,52 @@
     padding-left: 16px;
     padding-right: 16px;
     margin-top: 36px;
+  }
+
+  &-button
+  {
+    @include icon-button;
+
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+  }
+
+  &-overlay
+  {
+    background: $black-shadow;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+  }
+
+  &-formWrapper
+  {
+    @include responsive-container;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  &-form
+  {
+    background-color: $white;
+  }
+
+  &-addFormButtons
+  {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-submit
+  {
+    width: auto;
   }
 }
 

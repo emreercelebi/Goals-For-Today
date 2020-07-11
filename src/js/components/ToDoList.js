@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import { Checkbox } from 'semantic-ui-react';
+import { Button, Checkbox, Form } from 'semantic-ui-react';
 
-import { EDIT_ICON, TRASH_ICON } from './common/constants'
+import { ADD_ICON, EDIT_ICON, TRASH_ICON } from './common/constants'
 import Heading from './common/Heading';
 import IconButton from './common/IconButton';
 import Text from './common/Text';
+import { FormFieldHelper } from './common/helpers';
 
 const testTodos = [ //TODO: replace with data from database
   {
@@ -24,16 +25,60 @@ class ToDoList extends Component {
     super(props);
 
     this.state = {
-      selected: 0
+      selected: null,
+      showAddModal: false,
+      newTaskName: '',
+      newTaskDescription: ''
     }
 
     this.selectItem = this.selectItem.bind(this);
+    this.handleNewTaskNameChange = this.handleNewTaskNameChange.bind(this);
+    this.handleNewTaskDescriptionChange = this.handleNewTaskDescriptionChange.bind(this);
+    this.openAddModal = this.openAddModal.bind(this);
+    this.handleCancel = this.handleCancel.bind(this);
   }
 
   selectItem(index) {
     this.setState({
       selected: index
     });
+  }
+
+  openAddModal() {
+    this.setState(prevState => ({
+      ...prevState,
+      showAddModal: true,
+      newTaskName: '',
+      newTaskDescription: '',
+    }));
+  }
+
+  handleNewTaskNameChange(event) {
+    const { value } = event.target;
+    this.setState(prevState => ({
+      ...prevState,
+      newTaskName: value
+    }));
+  }
+
+  handleNewTaskDescriptionChange(event) {
+    const { value } = event.target;
+    this.setState(prevState => ({
+      ...prevState,
+      newTaskDescription: value
+    }));
+  }
+
+  handleAddTask() {
+    //TODO: implement
+    alert('you clicked the submit new task button');
+  }
+
+  handleCancel() {
+    this.setState(prevState => ({
+      ...prevState,
+      showAddModal: false
+    }));
   }
 
   render() {
@@ -53,6 +98,15 @@ class ToDoList extends Component {
             />
           ))}
         </div>
+        <IconButton baseClass='ToDoList' color='green' icon={ADD_ICON} onClick={this.openAddModal} />
+        {this.state.showAddModal
+          ? <AddToDoForm 
+              handleAddTask={this.handleAddTask} 
+              handleNewTaskNameChange={this.handleNewTaskNameChange}
+              handleNewTaskDescriptionChange={this.handleNewTaskDescriptionChange}
+              handleCancel={this.handleCancel}
+            />
+          : null}
       </div>
     )
   }
@@ -95,6 +149,24 @@ class ToDoItem extends Component {
       </div>
     )
   }
+}
+
+const AddToDoForm = (props) => {
+  return (
+    <div className="ToDoList-overlay">
+      <div className="ToDoList-formWrapper">
+        <Form className='ToDoList-form'>
+          <Heading hLevel={2} baseClass='ToDoList'>Add New Task</Heading>
+          <FormFieldHelper baseClass='ToDoList' idPrefix='todo' name='task name' onChange={props.handleNewTaskNameChange} />
+          <Form.TextArea className='ToDoList-taskDescription' placeholder='task description' onChange={props.handleNewTaskDescriptionChange} />
+          <div className="ToDoList-addFormButtons">
+            <Button negative className='ToDoList-cancel' type='button' onClick={props.handleCancel}>Cancel</Button>
+            <Button positive className='ToDoList-submit' type='submit' onClick={props.handleAddTask}>Submit</Button>
+          </div>
+        </Form>
+      </div>
+    </div>
+  )
 }
 
 export default ToDoList;
