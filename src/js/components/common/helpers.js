@@ -11,7 +11,7 @@ export const FormFieldHelper = (props) => {
   return (
     <Form.Field className={fieldClass}>
       <label className={labelClass} htmlFor={id}>{props.name}</label>
-      <input placeholder={props.name} id={id} onChange={props.onChange} />
+      <input placeholder={props.name} id={id} onChange={props.onChange} type={type} />
     </Form.Field>
   );
 }

@@ -41,7 +41,7 @@ class LoginForm extends Component {
     return (
       <Form className="Login-form">
         <FormFieldHelper baseClass='Login' idPrefix='login' name='email' onChange={this.handleEmailChange} />
-        <FormFieldHelper baseClass='Login' idPrefix='login' name='password' onChange={this.handlePasswordChange} />
+        <FormFieldHelper baseClass='Login' idPrefix='login' name='password' type='password' onChange={this.handlePasswordChange} />
         <Button positive className="Login-submit" type='submit' onClick={this.handleLogin}>Login</Button>
       </Form>
     );
