@@ -14,6 +14,19 @@ app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, '../dist', 'index.html'));
 });
 
+/**
+ * since we are using client-side react routing, we 
+ * need to manually serve index.html when a request is made
+ * for /create-account or /home
+ */
+app.get('/create-account', function(req, res) {
+  res.sendFile(path.join(__dirname, '../dist', 'index.html'));
+});
+
+app.get('/home', function(req, res) {
+  res.sendFile(path.join(__dirname, '../dist', 'index.html'));
+});
+
 app.use('/', require('./routes/index.js'));
 
 // Listen to the environment-specified port, or 8080 otherwise

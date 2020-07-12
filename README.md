@@ -13,3 +13,9 @@ Needed a combo of sources for the Sass setup, mostly these two: https://develope
 4. open a web browser and navigate to http://localhost:8080/ the app should be running!
 
 As long as the webpack server is running, code changes should be reflected after saving. Try it out!
+
+## To start the server locally
+
+1. Clone the repo, `cd Goals-For-Today` and `yarn`.
+2. `yarn build` to create the build files in the dist/ folder.
+3. `yarn server-start` to start the local server
