@@ -1,0 +1,28 @@
+extends email-base
+
+block content
+
+    h2.section-header Daily #{reminder_type} Briefing
+    p Hello, #{name}!
+    - 
+        var morning = false;
+        if (reminder_type === 'Morning') {
+            morning = true;
+        }
+    div.container
+        if morning
+            if goals
+                span Here are your unfinished tasks from yesterday.
+                ul
+                    each goal in goals
+                        li= goal.name
+        
+            else
+                span You have a clean slate today! Don't forget to enter your goals this morning!
+        else
+            h3 Evening wrap up is here.
+
+            p Here are some things you did today
+            ul 
+                li item 1
+                li item 2
