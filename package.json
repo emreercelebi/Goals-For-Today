@@ -47,8 +47,9 @@
     "webpack-dev-server": "^3.11.0"
   },
   "scripts": {
-    "build": "webpack --mode production",
-    "start": "webpack-dev-server --open --mode development",
-    "server-start": "node server/server.js"
+    "build": "webpack",
+    "start-two": "webpack-dev-server --open --mode development",
+    "server": "node server/server.js",
+    "build-production": "webpack --mode production"
   }
 }
