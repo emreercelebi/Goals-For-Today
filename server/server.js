@@ -5,7 +5,7 @@ var session = require('express-session');
 const path = require(`path`);
 const bodyParser = require('body-parser');
 app.enable('trust proxy');
-
+require('dotenv').config();
 
 
 app.use(express.static(path.join(__dirname, '../dist')));
