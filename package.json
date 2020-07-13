@@ -48,7 +48,7 @@
   },
   "scripts": {
     "start-two": "webpack-dev-server --open --mode development",
-    "server": "node server/server.js",
-    "build-production": "webpack --mode production"
+    "build-production": "webpack --mode production",
+    "start": "node server/server.js"
   }
 }
