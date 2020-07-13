@@ -8,10 +8,10 @@ app.enable('trust proxy');
 require('dotenv').config();
 
 
-app.use(express.static(path.join(__dirname, '../dist/react-project-test')));
+app.use(express.static(path.join(__dirname, '../dist')));
 
 app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname, '../dist/react-project-test', 'index.html'));
+  res.sendFile(path.join(__dirname, '../dist', 'index.html'));
 });
 
 /**
