@@ -49,7 +49,6 @@
   "scripts": {
     "start-two": "webpack-dev-server --open --mode development",
     "server": "node server/server.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
     "build-production": "webpack --mode production"
   }
 }
