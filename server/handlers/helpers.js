@@ -3,9 +3,17 @@
 // https://node-postgres.com/features/queries
 
 const {Pool, Client } = require('pg');
-const Config = require('../config/config');
 
-const pool = new Pool(Config.database_config);
+const dbConfig =  {"user": process.env.DATABASE_USER,
+"host": process.env.DATABASE_HOST,
+"database" : process.env.DATABASE_DB,
+"password": process.env.DATABASE_PW,
+"port": process.env.DATABASE_PORT}
+
+
+const pool = new Pool(
+   dbConfig
+  );
 
 // example from postgres client npm site
 pool.query('SELECT NOW()', (err, res) => {
