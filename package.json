@@ -20,7 +20,7 @@
     "debug": "^4.1.1",
     "dotenv": "^4.0.0",
     "email-templates": "^7.0.5",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-session": "^1.17.1",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
